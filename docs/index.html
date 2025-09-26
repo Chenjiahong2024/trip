@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trip 使用说明</title>
+    <meta name="description" content="Trip iOS 应用使用方法：登录与同步、主页与探索、计划、地图、统计、相册与详情、个人与设置、常见问题。">
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: #121933;
+        --text: #eef2ff;
+        --muted: #a7b0d6;
+        --brand: #6ea8fe;
+        --brand-2: #4dd4ac;
+        --border: #233056;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(1200px 800px at 10% 0%, #10173a 0%, var(--bg) 50%),
+                    radial-gradient(800px 800px at 90% 10%, #0e243a 0%, var(--bg) 60%),
+                    var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      .container { max-width: 980px; margin: 0 auto; padding: 32px 20px 60px; }
+      header {
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+        padding: 20px; border: 1px solid var(--border); border-radius: 16px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+        backdrop-filter: blur(8px);
+      }
+      .title { font-size: 24px; font-weight: 700; letter-spacing: .2px; }
+      .subtitle { color: var(--muted); font-size: 14px; margin-top: 4px; }
+      .cta {
+        display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 10px;
+        color: #0a0f1f; text-decoration: none; font-weight: 600; background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        box-shadow: 0 6px 22px rgba(110,168,254,.35);
+      }
+      .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: 18px; }
+      .card {
+        grid-column: span 12; border: 1px solid var(--border); border-radius: 16px; padding: 20px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      }
+      @media (min-width: 900px) {
+        .span-4 { grid-column: span 4; }
+        .span-6 { grid-column: span 6; }
+        .span-8 { grid-column: span 8; }
+      }
+      h2 { margin: 0 0 10px; font-size: 18px; }
+      p { margin: 8px 0; color: #d8defa; }
+      ul { margin: 8px 0 0 18px; padding: 0; color: #d8defa; }
+      li { margin: 6px 0; }
+      code { background: #0e1430; border: 1px solid var(--border); padding: 2px 6px; border-radius: 6px; }
+      a { color: var(--brand-2); }
+      .muted { color: var(--muted); }
+      .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; padding: 1px 6px; border-radius: 6px; background: #111733; border: 1px solid var(--border); color: #dfe6ff; }
+      footer { margin-top: 28px; color: var(--muted); font-size: 13px; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <div class="title">Trip 使用说明</div>
+          <div class="subtitle">帮助你快速上手：记录旅途、规划行程、探索世界</div>
+        </div>
+        <a class="cta" href="#start">开始使用</a>
+      </header>
+
+      <div class="grid">
+        <section id="start" class="card span-8">
+          <h2>1. 安装与首次启动</h2>
+          <ul>
+            <li>在 Xcode 中选择目标设备，运行项目到 iPhone 模拟器或真机。</li>
+            <li>首次启动会显示引导/登录界面，按需完成 <strong>Apple 登录</strong> 或使用 <strong>本地账户</strong>。</li>
+            <li>如需云同步，允许 iCloud 权限（在系统设置与 iCloud 同步开启）。</li>
+          </ul>
+        </section>
+
+        <section class="card span-4">
+          <h2>支持特性概览</h2>
+          <ul>
+            <li>多语言：简体/繁体/英文</li>
+            <li>深色模式与主题</li>
+            <li>iCloud 同步与本地持久化</li>
+            <li>旅行日志与相册</li>
+            <li>地图导航与足迹</li>
+            <li>探索与推荐</li>
+            <li>统计与可视化</li>
+          </ul>
+        </section>
+
+        <section class="card span-6">
+          <h2>2. 登录与同步</h2>
+          <ul>
+            <li>入口：登录页面（支持 Apple 登录）。</li>
+            <li>成功登录后，数据自动与 iCloud（若已启用）进行同步。</li>
+            <li>可在 <strong>设置</strong> 中切换同步开关与查看同步状态。</li>
+          </ul>
+        </section>
+
+        <section class="card span-6">
+          <h2>3. 主页与导航</h2>
+          <ul>
+            <li>底部 Tab 包含：<strong>首页</strong>、<strong>探索</strong>、<strong>计划</strong>、<strong>地图</strong>、<strong>统计</strong>、<strong>我</strong>。</li>
+            <li>首页展示最近旅行卡片与快捷入口。</li>
+            <li>任何页面均可通过底部栏快速切换。</li>
+          </ul>
+        </section>
+
+        <section class="card span-6">
+          <h2>4. 创建与管理旅行日志</h2>
+          <ul>
+            <li>点击 <strong>添加</strong> 进入 <em>新增旅行日志</em> 界面。</li>
+            <li>填写：标题、时间、地点、标签、笔记；可添加照片到对应相册。</li>
+            <li>保存后会在首页与相册中展示，支持编辑与删除。</li>
+          </ul>
+        </section>
+
+        <section class="card span-6">
+          <h2>5. 探索与目的地</h2>
+          <ul>
+            <li>在 <strong>探索</strong> 查看主题图片（城市、自然、山脉、海滩、美食、文化）。</li>
+            <li>支持收藏与筛选，辅助灵感发现与行程构思。</li>
+          </ul>
+        </section>
+
+        <section class="card span-6">
+          <h2>6. 计划与提醒</h2>
+          <ul>
+            <li>在 <strong>计划</strong> 中创建行程单，添加日程与待办。</li>
+            <li>可设置出发日期与行程时长，日历式查看更直观。</li>
+          </ul>
+        </section>
+
+        <section class="card span-6">
+          <h2>7. 地图与足迹</h2>
+          <ul>
+            <li>在 <strong>地图</strong> 查看已记录地点与路线。</li>
+            <li>支持定位授权后显示当前位置与导航入口。</li>
+          </ul>
+        </section>
+
+        <section class="card span-6">
+          <h2>8. 统计与可视化</h2>
+          <ul>
+            <li>在 <strong>统计</strong> 查看旅程天数、里程、目的地数量等指标。</li>
+            <li>支持基础图表展示趋势与分布。</li>
+          </ul>
+        </section>
+
+        <section class="card span-6">
+          <h2>9. 相册与详情</h2>
+          <ul>
+            <li>进入 <strong>相册/详情</strong> 查看每次旅行的照片与笔记。</li>
+            <li>支持分享精选内容到社交媒体与相册导出。</li>
+          </ul>
+        </section>
+
+        <section class="card span-6">
+          <h2>10. 个人与设置</h2>
+          <ul>
+            <li>在 <strong>我</strong> 页面管理账户与偏好。</li>
+            <li>主题与外观：<strong>跟随系统/深色模式</strong>、主题图片。</li>
+            <li>语言：简体中文 / 繁体中文 / English。</li>
+            <li>隐私：定位授权、相册访问、数据备份与清理。</li>
+            <li>同步：iCloud 开关、手动触发同步。</li>
+          </ul>
+        </section>
+
+        <section class="card span-12">
+          <h2>常见问题</h2>
+          <ul>
+            <li><strong>无法登录？</strong> 确认网络正常；如使用 Apple 登录，请在系统设置中检查 Apple ID 授权。</li>
+            <li><strong>iCloud 不同步？</strong> 打开系统 iCloud 同步；在设置中退出并重新登录 iCloud 尝试。</li>
+            <li><strong>定位失败？</strong> 前往 iOS 设置 → 隐私与安全 → 定位服务，允许本 App 访问。</li>
+            <li><strong>图片无法保存？</strong> 检查照片访问权限，或释放设备存储空间。</li>
+          </ul>
+          <p class="muted">建议在最新的 iOS 与 Xcode 模拟器上体验以获得最佳效果。</p>
+        </section>
+      </div>
+
+      <footer>
+        <div>© <span id="y"></span> Trip · 使用说明</div>
+      </footer>
+    </div>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
