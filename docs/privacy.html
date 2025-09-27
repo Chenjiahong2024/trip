@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trip 隐私政策</title>
+    <meta name="description" content="Trip iOS 应用隐私政策：数据收集与使用、权限说明、共享与第三方、数据安全与保留、用户权利、联系我们。">
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: #121933;
+        --text: #eef2ff;
+        --muted: #a7b0d6;
+        --brand: #6ea8fe;
+        --brand-2: #4dd4ac;
+        --border: #233056;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(1200px 800px at 10% 0%, #10173a 0%, var(--bg) 50%),
+                    radial-gradient(800px 800px at 90% 10%, #0e243a 0%, var(--bg) 60%),
+                    var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+      }
+      .container { max-width: 980px; margin: 0 auto; padding: 32px 20px 60px; }
+      header {
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+        padding: 20px; border: 1px solid var(--border); border-radius: 16px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+        backdrop-filter: blur(8px);
+      }
+      .title { font-size: 24px; font-weight: 700; letter-spacing: .2px; }
+      .subtitle { color: var(--muted); font-size: 14px; margin-top: 4px; }
+      .links { display: flex; gap: 10px; align-items: center; }
+      .cta {
+        display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 10px;
+        color: #0a0f1f; text-decoration: none; font-weight: 600; background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        box-shadow: 0 6px 22px rgba(110,168,254,.35);
+      }
+      .muted-link { color: var(--brand-2); text-decoration: none; }
+      .card { border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-top: 16px;
+              background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+      h2 { margin: 0 0 10px; font-size: 18px; }
+      p, li { color: #d8defa; }
+      ul { margin: 6px 0 0 18px; padding: 0; }
+      footer { margin-top: 28px; color: var(--muted); font-size: 13px; text-align: center; }
+      .law { font-size: 13px; color: var(--muted); }
+      .badge { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; border:1px solid var(--border); background:#111733; color:#dfe6ff; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <div class="title">Trip 隐私政策</div>
+          <div class="subtitle">保护你的数据与隐私 · 生效日期：<span id="effective"></span></div>
+        </div>
+        <div class="links">
+          <a class="muted-link" href="./index.html">返回使用说明</a>
+          <a class="cta" href="#contact">联系我们</a>
+        </div>
+      </header>
+
+      <section class="card">
+        <p>欢迎使用 Trip（“本应用”）。我们重视你的隐私与数据安全。本隐私政策说明我们如何在你使用本应用时收集、使用、存储、共享你的信息以及你所享有的权利。</p>
+        <p class="law">如对本政策有任何疑问，请参考“联系我们”部分。</p>
+      </section>
+
+      <section class="card">
+        <h2>1. 我们收集的信息</h2>
+        <ul>
+          <li><span class="badge">账户信息（可选）</span> 当你使用邮箱注册或登录时，我们会收集你提供的邮箱、昵称等信息。</li>
+          <li><span class="badge">旅行日志数据</span> 你手动创建的旅行记录、文本笔记、打分与标签等内容。</li>
+          <li><span class="badge">位置信息（经授权）</span> 仅在你授权定位权限并在地图中使用相关功能时获取当前定位，用于展示位置与足迹，不会在后台持续跟踪。</li>
+          <li><span class="badge">照片/相机（经授权）</span> 仅在你使用添加照片功能时访问相册或相机；照片用于你的旅行相册，本应用不进行面部识别。</li>
+          <li><span class="badge">日历（经授权）</span> 若你在“计划”中创建行程并保存到系统日历，我们需要访问可写入的日历。</li>
+          <li><span class="badge">诊断与日志</span> 为改进体验，我们可能收集崩溃日志与基础性能数据（如在系统日志/控制台），不包含可识别个人身份的信息。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>2. 数据使用目的</h2>
+        <ul>
+          <li>提供核心功能：旅行记录、地图展示、相册与行程计划。</li>
+          <li>同步与备份：当你开启 iCloud 同步时，数据会存储于你的 iCloud 账户。</li>
+          <li>改进与安全：用于问题诊断、性能优化与防止滥用。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3. 数据存储与保留</h2>
+        <ul>
+          <li><strong>本地存储</strong>：你的旅行数据默认保存在设备本地。</li>
+          <li><strong>iCloud 同步</strong>：当开启后，数据会存储在 Apple 的 iCloud 服务中并在你的设备间同步。</li>
+          <li><strong>保留期限</strong>：我们仅在实现上述目的所需期间保留数据，你可在应用中删除你的内容。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4. 第三方共享与传输</h2>
+        <ul>
+          <li>我们<strong>不向第三方出售</strong>你的个人数据。</li>
+          <li>我们<strong>不用于广告跟踪</strong>，也<strong>不与广告商共享</strong>你的个人数据。</li>
+          <li>当你使用 iCloud 同步时，数据在 Apple 基础设施中处理与传输，受 Apple 隐私政策与安全机制保护。</li>
+          <li>法律要求或执法机关依法提出请求时，可能在符合法律程序的前提下披露必要信息。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>5. 你的权利</h2>
+        <ul>
+          <li>访问与更正：你可以在应用中查看与编辑你的旅行数据与账户资料。</li>
+          <li>删除：你可删除旅行记录、照片等；卸载应用可删除本地数据。</li>
+          <li>撤回授权：你可在 iOS 设置中关闭定位、相册、相机、日历等权限。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>6. 儿童隐私</h2>
+        <p>本应用面向普通用户，不以 13 岁以下儿童为目标受众。如你认为我们在未获得监护人同意的情况下收集了儿童信息，请与我们联系，我们会尽快处理。</p>
+      </section>
+
+      <section class="card">
+        <h2>7. 安全</h2>
+        <p>我们采取合理的技术与组织措施保护你的数据安全，包括系统权限隔离、最小化收集原则等。但任何传输与存储方式都无法保证 100% 绝对安全。</p>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>8. 联系我们</h2>
+        <p>若你对本隐私政策或数据处理有任何疑问、意见或投诉，请通过以下方式联系我们：</p>
+        <ul>
+          <li>GitHub 反馈：<a class="muted-link" href="https://github.com/Chenjiahong2024/trip/issues" target="_blank" rel="noopener">提交 Issue</a></li>
+          <li>电子邮件：<code>admin@trip.com</code>（演示邮箱，可在发布前替换为你的正式邮箱）</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>9. 变更</h2>
+        <p>我们可能会不时更新本隐私政策。重大变更时，我们将在本页面显著位置提示更新日期与主要变更内容。请定期查阅以了解最新信息。</p>
+      </section>
+
+      <footer>
+        <div>© <span id="y"></span> Trip · 隐私政策</div>
+      </footer>
+    </div>
+    <script>
+      const d = new Date();
+      document.getElementById('y').textContent = d.getFullYear();
+      document.getElementById('effective').textContent = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    </script>
+  </body>
+  </html>
+
+
